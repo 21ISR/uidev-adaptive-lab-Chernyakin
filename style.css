@@ -105,3 +105,14 @@ textarea:not([rows]) {
     border-radius: 1rem;
     background-color: black;
 }
+
+@media screen and (max-width: 768px) { }   /* до 768px включительно */
+@media screen and (min-width: 768px) { }   /* от 768px и выше */
+@media screen and (min-width: 480px) and (max-width: 768px) { }  /* диапазон */
+
+/* По ориентации */
+@media screen and (orientation: portrait) { }   /* вертикальный экран */
+@media screen and (orientation: landscape) { }  /* горизонтальный экран */
+
+/* По плотности пикселей (ретина-экраны) */
+@media screen and (min-resolution: 2dppx) { }
