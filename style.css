@@ -81,18 +81,19 @@ textarea:not([rows]) {
 }
 
 .content {
-    background: #020024;
-    background: linear-gradient(
-        222deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(9, 9, 121, 1) 35%,
-        rgba(0, 212, 255, 1) 100%
-    );
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #020024;
+    background: linear-gradient(222deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgba(0, 212, 255, 1) 100%);
     color: white;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .sizes {
@@ -106,13 +107,43 @@ textarea:not([rows]) {
     background-color: black;
 }
 
-@media screen and (max-width: 768px) { }   /* до 768px включительно */
-@media screen and (min-width: 768px) { }   /* от 768px и выше */
-@media screen and (min-width: 480px) and (max-width: 768px) { }  /* диапазон */
+@media screen and (max-width: 1440px) {
+    .content {
+        min-width: 95vw;
+        min-height: 100vh;
+    }
 
-/* По ориентации */
-@media screen and (orientation: portrait) { }   /* вертикальный экран */
-@media screen and (orientation: landscape) { }  /* горизонтальный экран */
+    html {
+        font-size: 100%
+    }
+}
 
-/* По плотности пикселей (ретина-экраны) */
-@media screen and (min-resolution: 2dppx) { }
+@media screen and (max-width: 1024px) {
+    .content {
+        min-width: 95vw;
+        min-height: 100vh;
+    }
+    html {
+        font-size: 87.5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        max-width: 480px;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        max-width: 480px;
+    }
+
+    html {
+        font-size: 50%;
+    }
+}
