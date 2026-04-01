@@ -96,6 +96,10 @@ textarea:not([rows]) {
     margin: 0 auto;
 }
 
+.container {
+    padding: 0 2rem;
+}
+
 .sizes {
     display: flex;
     gap: 4rem;
@@ -109,7 +113,6 @@ textarea:not([rows]) {
 
 @media screen and (max-width: 1440px) {
     .content {
-        min-width: 95vw;
         min-height: 100vh;
     }
 
@@ -119,10 +122,6 @@ textarea:not([rows]) {
 }
 
 @media screen and (max-width: 1024px) {
-    .content {
-        min-width: 95vw;
-        min-height: 100vh;
-    }
     html {
         font-size: 87.5%;
     }
@@ -132,7 +131,6 @@ textarea:not([rows]) {
     .content {
         max-width: 480px;
     }
-
     html {
         font-size: 62.5%;
     }
@@ -142,7 +140,6 @@ textarea:not([rows]) {
     .content {
         max-width: 480px;
     }
-
     html {
         font-size: 50%;
     }
