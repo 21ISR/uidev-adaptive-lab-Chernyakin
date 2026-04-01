@@ -81,18 +81,23 @@ textarea:not([rows]) {
 }
 
 .content {
-    background: #020024;
-    background: linear-gradient(
-        222deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(9, 9, 121, 1) 35%,
-        rgba(0, 212, 255, 1) 100%
-    );
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #020024;
+    background: linear-gradient(222deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgba(0, 212, 255, 1) 100%);
     color: white;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 0 2rem;
 }
 
 .sizes {
@@ -104,4 +109,38 @@ textarea:not([rows]) {
     padding: 1rem 2rem;
     border-radius: 1rem;
     background-color: black;
+}
+
+@media screen and (max-width: 1440px) {
+    .content {
+        min-height: 100vh;
+    }
+
+    html {
+        font-size: 100%
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        max-width: 480px;
+    }
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        max-width: 480px;
+    }
+    html {
+        font-size: 50%;
+    }
 }
